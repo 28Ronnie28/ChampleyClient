@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="835.0" prefWidth="1114.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ProductsController">
+   <children>
+      <Label styleClass="heading-text" stylesheets="@../resources/ChampleyStyle.css" text="Champley" />
+      <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Products" />
+      <VBox alignment="CENTER" prefHeight="572.0" prefWidth="1114.0" spacing="40.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+               <children>
+                  <TextField fx:id="searchTxf" prefHeight="25.0" prefWidth="942.0" styleClass="products-searchfield" stylesheets="@../resources/ChampleyStyle.css" />
+                  <Button fx:id="searchBtn" mnemonicParsing="false" onAction="#searchButtonClick" styleClass="products-button" stylesheets="@../resources/ChampleyStyle.css" text="Search" />
+               </children>
+            </HBox>
+            <ListView fx:id="productsListView" prefHeight="472.0" prefWidth="1000.0" styleClass="products-list-view" stylesheets="@../resources/ChampleyStyle.css" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="50.0" right="50.0" top="20.0" />
+         </padding>
+      </VBox>
+      <HBox prefHeight="160.0" prefWidth="1114.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="128.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addButtonClick" prefHeight="80.0" prefWidth="80.0" styleClass="home-icon-image-add" stylesheets="@../resources/ChampleyStyle.css">
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../resources/Add.png"/>
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Add" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="removeBtn" mnemonicParsing="false" onAction="#removeButtonClick" prefHeight="79.0" prefWidth="80.0" styleClass="home-icon-image-remove" stylesheets="@../resources/ChampleyStyle.css">
+                      <graphic>
+                          <ImageView>
+                              <image>
+                                  <Image url="@../resources/Remove.png"/>
+                              </image>
+                          </ImageView>
+                      </graphic>
+                  </Button>
+                  <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Remove" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="editBtn" mnemonicParsing="false" onAction="#editButtonClick" prefHeight="80.0" prefWidth="80.0" styleClass="home-icon-image-edit" stylesheets="@../resources/ChampleyStyle.css">
+                      <graphic>
+                          <ImageView>
+                              <image>
+                                  <Image url="@../resources/Edit.png"/>
+                              </image>
+                          </ImageView>
+                      </graphic>
+                  </Button>
+                  <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Edit" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="160.0" prefWidth="512.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="backBtn" alignment="CENTER" mnemonicParsing="false" onAction="#backButtonClick" prefHeight="80.0" prefWidth="80.0" styleClass="home-icon-image-back" stylesheets="@../resources/ChampleyStyle.css">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@../resources/Back.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Back" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

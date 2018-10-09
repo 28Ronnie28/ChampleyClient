@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" focusTraversable="true" prefHeight="400.0" prefWidth="640.0" spacing="20.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.LoginController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/NELogo.png" />
+         </image></ImageView>
+      <Label styleClass="heading-text" stylesheets="@../resources/ChampleyStyle.css" text="Champley" />
+      <Label fx:id="appHeadingLbl1" styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Providing Quality" />
+      <TextField fx:id="emailTxf" promptText="Username" styleClass="login-fields" stylesheets="@../resources/ChampleyStyle.css" text="Ronnie28" />
+      <TextField fx:id="passwordTxf" promptText="Password" styleClass="login-fields" stylesheets="@../resources/ChampleyStyle.css" text="password" />
+      <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#loginButtonClick" styleClass="login-button" stylesheets="@../resources/ChampleyStyle.css" text="Login" />
+      <Hyperlink fx:id="forgotPasswordHL" onAction="#forgotPasswordHLClicked" style="-fx-text-fill: #28bbff;" text="Forgot Password?" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

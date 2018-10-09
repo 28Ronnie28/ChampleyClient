@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="79.0" prefWidth="642.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.DocumentCardController">
+   <children>
+      <VBox fx:id="documentNameVBox" alignment="CENTER" prefHeight="79.0" prefWidth="407.0">
+         <children>
+            <Label fx:id="documentNameLbl" styleClass="headingInfo-text" stylesheets="@../resources/ChampleyStyle.css" text="Document Name:" />
+         </children>
+      </VBox>
+      <HBox fx:id="buttonHBox" alignment="CENTER" prefHeight="79.0" prefWidth="270.0" spacing="10.0">
+         <children>
+            <Button fx:id="viewBtn" mnemonicParsing="false" onAction="#openButtonClick" prefHeight="45.0" prefWidth="45.0">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../resources/ViewSmall.png"/>
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="removeBtn" mnemonicParsing="false" onAction="#removeButtonClick" prefHeight="45.0" prefWidth="45.0">
+                <graphic>
+                    <ImageView>
+                        <image>
+                            <Image url="@../resources/RemoveSmall.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="sendBtn" mnemonicParsing="false" onAction="#sendButtonClick" prefHeight="45.0" prefWidth="45.0">
+                <graphic>
+                    <ImageView>
+                        <image>
+                            <Image url="@../resources/SendSmall.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="exportBtn" mnemonicParsing="false" onAction="#exportButtonClick" prefHeight="45.0" prefWidth="45.0">
+                <graphic>
+                    <ImageView>
+                        <image>
+                            <Image url="@../resources/ExportSmall.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</HBox>

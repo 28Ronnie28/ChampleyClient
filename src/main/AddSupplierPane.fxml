@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="870.0" spacing="20.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.AddSupplierController">
+   <children>
+      <Label styleClass="heading-text" stylesheets="@../resources/ChampleyStyle.css" text="Champley" />
+      <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Add Supplier" />
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="TOP_RIGHT" prefHeight="246.0" prefWidth="258.0" spacing="30.0">
+               <children>
+                  <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Name:" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="231.0" styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Contact Number:" />
+                  <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Email:" />
+                  <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Address:" />
+               </children>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="40.0">
+               <children>
+                  <TextField fx:id="nameTxf" styleClass="products-searchfield" stylesheets="@../resources/ChampleyStyle.css" />
+                  <TextField fx:id="contactNumberTxf" styleClass="products-searchfield" stylesheets="@../resources/ChampleyStyle.css" />
+                  <TextField fx:id="emailTxf" styleClass="products-searchfield" stylesheets="@../resources/ChampleyStyle.css" />
+                  <TextField fx:id="addressTxf" styleClass="products-searchfield" stylesheets="@../resources/ChampleyStyle.css" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="147.0" prefWidth="785.0">
+         <children>
+            <HBox prefHeight="147.0" prefWidth="350.0" />
+            <VBox alignment="CENTER" prefHeight="147.0" prefWidth="238.0">
+               <children>
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addButtonClick" prefHeight="80.0" prefWidth="80.0" styleClass="home-icon-image-save" stylesheets="@../resources/ChampleyStyle.css">
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../resources/Add.png"/>
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Save" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="147.0" prefWidth="238.0">
+               <children>
+                  <Button fx:id="backBtn" mnemonicParsing="false" onAction="#backButtonClick" prefHeight="80.0" prefWidth="80.0" styleClass="home-icon-image-back" stylesheets="@../resources/ChampleyStyle.css">
+                      <graphic>
+                          <ImageView>
+                              <image>
+                                  <Image url="@../resources/Back.png"/>
+                              </image>
+                          </ImageView>
+                      </graphic>
+                  </Button>
+                  <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Back" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

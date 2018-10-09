@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="864.0" prefWidth="1140.0" spacing="10.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ViewSupplierController">
+   <children>
+      <Label styleClass="heading-text" stylesheets="@../resources/ChampleyStyle.css" text="Champley" />
+      <Label fx:id="nameLbl" styleClass="headingInfo-text" stylesheets="@../resources/ChampleyStyle.css" text="Test Makro" />
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="101.0" prefWidth="819.0">
+               <children>
+                  <Label fx:id="contactLbl" styleClass="headingInfo-text" stylesheets="@../resources/ChampleyStyle.css" text="Contact Number: 021 554 4019" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" styleClass="headingInfo-text" stylesheets="@../resources/ChampleyStyle.css" text="Email: " />
+                        <Hyperlink fx:id="emailHL" onAction="#emailHLButtonClick" style="-fx-font-weight: bold; -fx-font-size: 18;" text="info@test.co.za" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="addressLbl" styleClass="headingInfo-text" stylesheets="@../resources/ChampleyStyle.css" text="Address: 11 Durham Close, West Beach" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="496.0" prefWidth="1140.0" spacing="10.0">
+         <children>
+            <Label styleClass="headingInfo-text" stylesheets="@../resources/ChampleyStyle.css" text="Products:" />
+            <ListView fx:id="productsListView" prefHeight="472.0" prefWidth="1000.0" styleClass="products-list-view" stylesheets="@../resources/ChampleyStyle.css">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </ListView>
+         </children>
+         <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="TOP_CENTER" prefHeight="128.0" prefWidth="893.0">
+         <children>
+            <HBox prefHeight="128.0" prefWidth="556.0" />
+            <VBox alignment="CENTER" prefHeight="119.0" prefWidth="238.0">
+               <children>
+                  <Button fx:id="backBtn" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="80.0" prefWidth="80.0" styleClass="home-icon-image-back" stylesheets="@../resources/ChampleyStyle.css">
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../resources/Back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Back" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

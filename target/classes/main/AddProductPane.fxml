@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="870.0" spacing="20.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.AddProductController">
+   <children>
+      <Label styleClass="heading-text" stylesheets="@../resources/ChampleyStyle.css" text="Champley" />
+      <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Add Product" />
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="TOP_RIGHT" prefHeight="250.0" prefWidth="192.0" spacing="30.0">
+               <children>
+                  <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Supplier: " />
+                  <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Category: " />
+                  <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Description: " />
+                  <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Price:" />
+               </children>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="246.0" prefWidth="317.0" spacing="20.0">
+               <children>
+                  <ComboBox fx:id="supplierCmb" prefWidth="150.0" styleClass="products-combo-box" stylesheets="@../resources/ChampleyStyle.css" />
+                  <ComboBox fx:id="categoryCmb" maxWidth="202.0" prefHeight="39.0" prefWidth="202.0" styleClass="products-combo-box" stylesheets="@../resources/ChampleyStyle.css" />
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="35.0">
+                     <children>
+                        <TextField fx:id="descriptionTxf" styleClass="input-textfield" stylesheets="@../resources/ChampleyStyle.css">
+                           <padding>
+                              <Insets top="30.0" />
+                           </padding>
+                        </TextField>
+                        <TextField fx:id="priceTxf" styleClass="input-textfield" stylesheets="@../resources/ChampleyStyle.css" />
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="240.0" prefWidth="131.0">
+               <children>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="101.0" prefWidth="111.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="addCategoryBtn" mnemonicParsing="false" onAction="#addCategoryButtonClick" prefHeight="32.0" prefWidth="32.0">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@../resources/AddSmall.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="removeCategoryBtn" mnemonicParsing="false" onAction="#removeCategoryButtonClick" prefHeight="32.0" prefWidth="32.0">
+                         <graphic>
+                             <ImageView>
+                                 <image>
+                                     <Image url="@../resources/RemoveSmall.png" />
+                                 </image>
+                             </ImageView>
+                         </graphic>
+                     </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="147.0" prefWidth="785.0">
+         <children>
+            <HBox prefHeight="147.0" prefWidth="286.0" />
+            <VBox alignment="CENTER" prefHeight="147.0" prefWidth="238.0">
+               <children>
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addButtonClick" prefHeight="80.0" prefWidth="80.0" styleClass="home-icon-image-save" stylesheets="@../resources/ChampleyStyle.css">
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../resources/Add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Save" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="147.0" prefWidth="238.0">
+               <children>
+                  <Button fx:id="backBtn" mnemonicParsing="false" onAction="#backButtonClick" prefHeight="80.0" prefWidth="80.0" styleClass="home-icon-image-back" stylesheets="@../resources/ChampleyStyle.css">
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../resources/Back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label styleClass="home-text" stylesheets="@../resources/ChampleyStyle.css" text="Back" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
